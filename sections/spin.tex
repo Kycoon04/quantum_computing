@@ -1,0 +1,86 @@
+\newpage
+\section{Espín}
+\noindent
+
+\subsection*{Definición de Espín}
+\noindent
+El espín es una propiedad intrínseca de las partículas cuánticas que puede entenderse como una forma de momento angular interno. A diferencia del momento angular orbital, el espín no está asociado a un movimiento en el espacio clásico, sino que es una característica fundamental de las partículas. Matemáticamente, el espín se describe mediante un operador $S$ que cumple las mismas reglas de conmutación que el momento angular orbital $L$:
+\[
+[S_i, S_j] = i\hbar \epsilon_{ijk} S_k,
+\]
+donde $\epsilon_{ijk}$ es el símbolo de Levi-Civita, y $\hbar$ es la constante reducida de Planck. Estas relaciones indican que el espín obedece las leyes de la mecánica cuántica y tiene una naturaleza discreta.
+
+\noindent
+La magnitud del espín está dada por:
+\[
+S^2 = s(s+1)\hbar^2,
+\]
+donde $s$ es el número cuántico de espín que puede tomar valores enteros o semi-enteros. Por ejemplo, para los electrones, $s = \frac{1}{2}$. Este valor implica que el espín tiene dos posibles proyecciones sobre cualquier eje escogido.
+
+\subsection*{Proyección del Espín}
+\noindent
+El espín de una partícula puede proyectarse sobre un eje, comúnmente el eje $z$, y sus posibles valores están dados por:
+\[
+S_z = m_s \hbar,
+\]
+donde $m_s$ es el número cuántico magnético de espín, que para un electrón toma valores $m_s = \pm\frac{1}{2}$. Esto significa que en un campo magnético externo, el espín de una partícula puede orientarse en una de dos direcciones discretas: hacia arriba ($m_s = +\frac{1}{2}$) o hacia abajo ($m_s = -\frac{1}{2}$).
+
+\subsection*{El Experimento de Stern-Gerlach}
+\noindent
+El experimento de Stern-Gerlach fue diseñado en 1922 por Otto Stern y Walther Gerlach para estudiar la cuantización espacial del momento angular de los átomos, lo que llevó al descubrimiento del espín como una propiedad intrínseca de las partículas subatómicas.
+
+\subsubsection*{Descripción del Experimento}
+\noindent
+Un haz de átomos de plata es producido calentando una fuente que contiene el metal. Estos átomos, al ser neutros, no deberían interactuar significativamente con un campo eléctrico, pero debido a sus momentos magnéticos, interactúan con un campo magnético externo. 
+
+Los átomos de plata son enviados a través de un campo magnético no uniforme generado por un par de imanes dispuestos de manera asimétrica, donde el campo magnético tiene una fuerte dependencia espacial en la dirección $z$. El momento magnético de los átomos interactúa con este campo, y los átomos experimentan una fuerza diferencial en función de la orientación de sus momentos magnéticos.
+
+\subsubsection*{Interacción del Momento Magnético con el Campo}
+\noindent
+El momento magnético $\boldsymbol{\mu}$ está relacionado con el espín mediante:
+\[
+\boldsymbol{\mu} = -g_s \mu_B \frac{{S}}{\hbar},
+\]
+donde $g_s$ es el factor de Landé para el espín (aproximadamente $2$ para electrones), y $\mu_B$ es el magnetón de Bohr:
+\[
+\mu_B = \frac{e\hbar}{2m_e}.
+\]
+Aquí, $e$ es la carga del electrón y $m_e$ es su masa.
+\noindent
+La interacción de $\boldsymbol{\mu}$ con el campo magnético ${B}$ genera una fuerza:
+\[
+{F} = \nabla(\boldsymbol{\mu} \cdot {B}),
+\]
+y dado que el campo magnético no es uniforme, esto conduce a una fuerza diferencial en la dirección $z$:
+\[
+F_z = \pm g_s \mu_B \frac{\partial B_z}{\partial z}.
+\]
+\noindent
+Al llegar a una pantalla detectora, los átomos no se distribuyen de manera continua, sino que forman dos bandas discretas. Esto demuestra que la proyección del momento magnético (y, por ende, del espín) solo puede tomar ciertos valores discretos. En el caso de los átomos de plata, los momentos magnéticos provienen principalmente del espín del electrón no apareado en su capa externa, lo que genera las dos bandas observadas.
+\noindent
+El resultado de este experimento es una evidencia directa de la cuantización del espín. La aparición de dos bandas separadas indica que el espín tiene solo dos estados posibles ($m_s = \pm\frac{1}{2}$), lo que contradice las predicciones de la física clásica, que sugeriría una distribución continua de orientaciones.
+
+\subsection*{Representación Matricial del Espín}
+\noindent
+El espín $\frac{1}{2}$ puede representarse mediante las matrices de Pauli, $\sigma_x$, $\sigma_y$ y $\sigma_z$, que son operadores en el espacio de dos dimensiones (spinor):
+\[
+\sigma_x = 
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}, \quad
+\sigma_y = 
+\begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix}, \quad
+\sigma_z = 
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}.
+\]
+El operador de espín en una dirección arbitraria ${n} = (n_x, n_y, n_z)$ está dado por:
+\[
+{S} \cdot {n} = \frac{\hbar}{2}(n_x \sigma_x + n_y \sigma_y + n_z \sigma_z).
+\]
