@@ -1,57 +1,69 @@
-\newpage
 \section{Partículas}
 \noindent 
-Para empezar este capítulo, es importante tener claro al menos los conceptos básicos de las partículas y sus comportamientos, pues, es con estos conceptos son con los cuales estaremos trabajando en la computación cuántica, este es un resumen de todo lo básico y necesario, se puede estudiar a más profundidad si así lo desean, recomiendo en tal caso leerse el libro “Atomic Theory and the Description of Nature” de Niels Bohr
-\subsection*{¿Qué es un electrón?}
-\noindent 
-El electrón es una partícula subatómica con carga eléctrica negativa de magnitud $-e$, donde $e = 1.602 \times 10^{-19} \, \text{C}$. Es una de las partículas fundamentales según el modelo estándar de la física de partículas y no tiene estructura interna conocida, es decir, no está compuesta por partículas más pequeñas. Posee una masa de:
+Para empezar esta guía, quiero comenzar por la base de todo. Sería inútil hablar sobre computación cuántica y qubits sin entender realmente con qué estamos trabajando. No se preocupen, este no será un capítulo muy teórico ni estará lleno de fórmulas matemáticas (que, obviamente, son necesarias), pero trataré de explicarlo con palabras más naturales para todos. Además, este tema es sumamente amplio, por lo cual solo se explicará lo fundamental y necesario para comprender mejor los conceptos utilizados en la computación cuántica. Esto no reemplaza el aprendizaje a un nivel más profundo sobre física (recomiendo leer el libro *Atomic Theory and the Description of Nature* de Niels Bohr); es solamente una introducción a este fascinante mundo.\\
 
+\noindent 
+¡Bienvenidos al mundo cuántico, donde si no estás entendiendo nada, es porque lo estás entendiendo todo!
+
+\noindent 
+Al principio podríamos pensar que el universo se rige únicamente por las leyes que conocemos, como la ley de la gravedad descubierta por Isaac Newton. Esta idea parece lógica, ya que convivimos con la gravedad todos los días y observamos su comportamiento constantemente. Sin embargo, aunque esta ley explica muchos fenómenos cotidianos y astronómicos, no abarca por completo todos los aspectos del universo, especialmente en escalas extremadamente grandes, como las galaxias, o extremadamente pequeñas, como las partículas subatómicas. Es en estas escalas donde estaremos enfocados.\\
+
+\noindent 
+Un ejemplo claro de estas diferencias son los seres unicelulares. Para ellos, nuestro concepto de 'arriba' y 'abajo', que nos da una orientación gracias a la gravedad, carece de relevancia. En cambio, para estos organismos, la tensión superficial tiene un papel mucho más importante que la fuerza gravitatoria. La tensión superficial es una consecuencia de la atracción entre las moléculas de un líquido, que forman una especie de 'capa elástica' en su superficie. Esta atracción es causada por una fuerza conocida como la fuerza de Van der Waals. Estas interacciones ocurren cuando los átomos y las moléculas están muy cerca unos de otros, generando una atracción que puede unirlos con cierta intensidad. A nivel molecular, las fuerzas de Van der Waals son el resultado de interacciones débiles entre dipolos eléctricos temporales o permanentes en las moléculas. Aunque estas fuerzas son mucho más débiles que los enlaces químicos como los covalentes o iónicos, son fundamentales en muchos procesos biológicos y químicos, como la adhesión entre superficies o el comportamiento de las membranas celulares.\\
+
+\noindent 
+Antes de hablar y explicar más términos, vamos a repasar un poco los más básicos y adentrarnos en lo más pequeño. Para muchos, se les puede haber olvidado qué es una partícula subatómica, qué son las moléculas, un fotón, entre otros términos. Entonces, empecemos por lo esencial.\\
+
+\noindent 
+Las partículas subatómicas son los componentes más pequeños que existen y, por ende, conforman los átomos. Entre estas partículas se incluyen los electrones, protones y neutrones, entre otras (las cuales no detallaremos aquí). Los electrones tienen una carga negativa y giran alrededor del núcleo del átomo, mientras que los protones, con carga positiva, y los neutrones, sin carga, se encuentran en el núcleo. El electrón es una partícula subatómica con carga eléctrica negativa de magnitud $-e$, donde $e = 1.602 \times 10^{-19} \, \text{C}$. Es una de las partículas fundamentales según el modelo estándar de la física de partículas y no tiene estructura interna conocida, es decir, no está compuesta por partículas más pequeñas. Posee una masa de:
 \[
 m_e = 9.109 \times 10^{-31} \, \text{kg}.
 \]
 \noindent 
-El electrón participa en interacciones electromagnéticas y es responsable de la mayoría de las propiedades químicas de los átomos, ya que forma los enlaces químicos y define la configuración electrónica, existen muchas más partículas subatómicas, las cuales no mencionaremos en esta investigación pues nos estaríamos alejando del tema principal.
+El electrón participa en interacciones electromagnéticas y es responsable de la mayoría de las propiedades químicas de los átomos, ya que forma los enlaces químicos y define la configuración electrónica.\\
 
-\subsection*{¿Qué es un fotón?}
 \noindent 
-El fotón es la partícula elemental de la luz y de todas las formas de radiación electromagnética. Es un bosón sin masa que actúa como el cuanto de energía del campo electromagnético. Su energía está relacionada con la frecuencia de la radiación según:
+Al mencionar los átomos, es importante recordar que el átomo es la unidad básica de la materia que conserva las propiedades químicas de un elemento. Está compuesto por un núcleo central y una nube de electrones cargados eléctricamente que se mueven alrededor del núcleo, lo que le da su forma casi esférica. La carga eléctrica del electrón es de signo opuesto a la del núcleo, lo que provoca que los electrones estén fuertemente atraídos hacia él y, al mismo tiempo, se repelan mutuamente. Esta interacción obedece a la fuerza electrostática o de Coulomb.\\
 
+\noindent 
+Prácticamente toda la masa del átomo se encuentra en el núcleo, que está compuesto por protones y neutrones, ambos considerados partículas subatómicas. Los protones son partículas con carga positiva igual a $+e$ y tienen una masa de:
+\[
+m_p = 1.673 \times 10^{-27} \, \text{kg}.
+\]
+\noindent 
+Por su parte, los neutrones son partículas neutras (sin carga) con una masa ligeramente mayor que la del protón:
+\[
+m_n = 1.675 \times 10^{-27} \, \text{kg}.
+\]
+\noindent 
+Es importante señalar que los protones y neutrones, colectivamente, son llamados nucleones.\\
+
+\noindent 
+Cuando varios átomos se agrupan, forman moléculas. Actualmente, se conocen más de 100 tipos de átomos (elementos), cada uno con características que los diferencian de los demás. La fuerza nuclear fuerte, mediada por los gluones, mantiene unidos a los nucleones, contrarrestando la repulsión eléctrica entre los protones. El número de protones determina el elemento químico (número atómico, $Z$), mientras que el número de neutrones define los isótopos de dicho elemento.\\
+
+\noindent 
+Es fundamental aclarar la diferencia entre masa y peso, ya que suelen confundirse. En la Tierra, los objetos tienen un peso que parece equivalente a su masa, pero esto se debe a la fuerza gravitatoria que ejerce el planeta sobre ellos. El peso, en realidad, es la fuerza con la que la gravedad atrae un objeto hacia el centro de la Tierra. En cambio, la masa es una propiedad intrínseca del objeto y no cambia, sin importar dónde se encuentre. Por ejemplo, en una nave espacial lejos de la influencia gravitacional de la Tierra, la masa de un objeto sigue siendo la misma, pero su peso sería prácticamente nulo.\\
+
+\noindent 
+Los electrones orbitan alrededor del núcleo en niveles de energía cuantizados, definidos por los principios de la mecánica cuántica. Los átomos de plata tienen 47 electrones: dos en la órbita más interna, ocho en la siguiente, luego dieciocho en cada uno de los dos niveles siguientes. Esto deja un único electrón en la órbita más externa. Los átomos de oro tienen 79 electrones; a diferencia del átomo de plata, este tiene 6 niveles, en los cuales: el primer nivel cuenta con dos electrones, ocho en el segundo nivel, dieciocho en el tercero, 32 en el cuarto, dieciocho en el quinto e, igual que el átomo de plata, el último nivel o la órbita más externa cuenta con un único electrón.\\
+
+\noindent 
+También es importante saber qué es un fotón. No es más que una partícula elemental de la luz y de todas las formas de radiación electromagnética. Es un bosón sin masa que actúa como el cuanto de energía del campo electromagnético. Su energía está relacionada con la frecuencia de la radiación según:
 \[
 E = h v,
 \]
 \noindent 
-$v$ es la frecuencia de la onda electromagnética. Además, el fotón tiene momento lineal dado por:
-
+donde $v$ es la frecuencia de la onda electromagnética. Además, el fotón tiene momento lineal dado por:
 \[
 p = \frac{h}{\lambda},
 \]
 \noindent 
-$\lambda$ es la longitud de onda. Los fotones no tienen carga eléctrica y viajan a la velocidad de la luz en el vacío, $c = 3.00 \times 10^8 \, \text{m/s}$.
-
-\subsection*{¿Qué es un átomo?}
+donde $\lambda$ es la longitud de onda. Los fotones no tienen carga eléctrica y viajan a la velocidad de la luz en el vacío:
+\[
+c = 3.00 \times 10^8 \, \text{m/s}.
+\]
 \noindent 
-El átomo es la unidad básica de la materia que conserva las propiedades químicas de un elemento. Está compuesto por un núcleo central y una nube de electrones. El núcleo, a su vez, contiene protones y neutrones:
-
-\begin{itemize}
-    \item \textbf{Protones:} Partículas (partícula subatómica) con carga positiva igual a $+e$ y masa $m_p = 1.673 \times 10^{-27} \, \text{kg}$.
-    \item \textbf{Neutrones:} Partículas (partícula subatómica) neutras (sin carga) con una masa ligeramente mayor que la del protón, $m_n = 1.675 \times 10^{-27} \, \text{kg}$.
-\end{itemize}
-\noindent 
-Los electrones orbitan alrededor del núcleo en niveles de energía cuantizados, definidos por los principios de la mecánica cuántica. Los átomos de plata tienen 47 electrones: dos en la órbita más interna, ocho en la siguiente, luego dieciocho en cada uno de los dos niveles siguientes. Esto deja un único electrón en la órbita más externa. Los átomos de oro tiene 79 electrones, a diferencia del átomo de plata, este tiene 6 niveles, en el cual, el primer nivel cuenta con dos electrones, ocho en el segundo nivel, dieciocho  en el tercero, 32 en el cuarto, dieciocho  en el quinto e igual que el átomo de plata, el último nivel o la órbita más externa cuenta con un único electrón.
-
-\subsection*{¿Qué es una partícula?}
-\noindent 
-En física, una partícula es una entidad que puede describirse mediante propiedades como masa, carga, y momento. Las partículas subatómicas se dividen en:
-
-\begin{itemize}
-    \item \textbf{Fermiones:} Constituyen la materia (electrones, protones, neutrones, quarks, etc.) y obedecen el principio de exclusión de Pauli.
-    \item \textbf{Bosones:} Median las interacciones fundamentales (fotones, gluones, bosones $W$ y $Z$, etc.).
-\end{itemize}
-
-\subsection*{¿De qué se compone un núcleo?}
-\noindent 
-El núcleo del átomo está compuesto por protones y neutrones, colectivamente llamados nucleones. La fuerza nuclear fuerte, mediada por los gluones, mantiene unidos a los nucleones, contrarrestando la repulsión eléctrica entre los protones. El número de protones define el elemento químico (número atómico $Z$), mientras que el número de neutrones determina los isótopos de dicho elemento.
-
+En una vista más general, una partícula es una entidad que puede describirse mediante propiedades como masa, carga y momento. Las partículas subatómicas se dividen en fermiones y bosones. Los fermiones constituyen la materia (electrones, protones, neutrones, quarks, etc.) y obedecen el principio de exclusión de Pauli, mientras que los bosones median las interacciones fundamentales (fotones, gluones, bosones $W$ y $Z$, etc.).
 
 \subsection*{Modelo atómico de Niels Bohr}
 \noindent 

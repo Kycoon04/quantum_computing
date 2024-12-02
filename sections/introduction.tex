@@ -18,22 +18,20 @@ En la computación clásica, si tiramos una moneda, caerá en alguna de sus dos 
 
 \subsection*{Moneda Cuántica}
 \noindent
-En la computación cuántica, una moneda "cuántica" no se comporta de la misma manera. Antes de medirla, no está estrictamente en cara ni en escudo. En cambio, está en un estado de \textbf{superposición} de ambos. Esto significa que la moneda cuántica puede representar simultáneamente un espectro de posibilidades de cara y escudo. Por ejemplo, podríamos describir este estado como:\\[0.5em]
-
+En la computación cuántica, una moneda "cuántica" no se comporta de la misma manera. Antes de medirla, no está estrictamente en cara ni en escudo. En cambio, está en un estado de \textbf{superposición} de ambos. Esto significa que la moneda cuántica puede representar simultáneamente un espectro de posibilidades de cara y escudo. Por ejemplo, podríamos describir este estado como:\\
 \[
 |\psi\rangle = \sqrt{0.8}|0\rangle + \sqrt{0.2}|1\rangle
-\] \\[0.5em]
-
+\]
 \noindent
 Aquí, \( |\psi\rangle \) es el estado cuántico de la moneda, y los coeficientes \( \sqrt{0.8} \) y \( \sqrt{0.2} \) representan las amplitudes de probabilidad para los estados \( |0\rangle \) (escudo) y \( |1\rangle \) (cara), respectivamente. Al medir la moneda, hay un 80\% de probabilidad de obtener escudo y un 20\% de probabilidad de obtener cara.
 Hasta que no la medimos, está en este estado de superposición, no se preocupen si ven muy raros estos símbolos, en los siguientes capítulos se explicará de una manera clara.\\[0.5em]
 \noindent
-Imaginemos también que visualizamos la moneda no como un objeto estático, sino como una esfera (la esfera de Bloch) donde cada punto en la superficie representa un posible estado cuántico, con combinaciones específicas de 0 y 1, como se puede visualizar en la figura~\ref{fig:esferaBloch}. En la computación clásica, el estado de un bit es determinista: siempre es 0 o 1, nunca ambos. En cambio, en la computación cuántica, un qubit puede estar en ambos estados simultáneamente hasta que lo medimos.\\[0.5em]
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.35]{img/EsferadeBloch.png}
-    \caption{La esfera de Bloch representa todos los posibles estados cuánticos de un qubit.}
-    \label{fig:esferaBloch}
-\end{figure} \\
+Imaginemos también que visualizamos la moneda no como un objeto estático, sino como una esfera (la esfera de Bloch) donde cada punto en la superficie representa un posible estado cuántico, con combinaciones específicas de 0 y 1, como se puede visualizar en la figura~\ref{fig:esferaBloch}. En la computación clásica, el estado de un bit es determinista: siempre es 0 o 1, nunca ambos. En cambio, en la computación cuántica, un qubit puede estar en ambos estados simultáneamente hasta que lo medimos.\\
 \noindent
-Con esto en mente, podemos entender mejor cómo los qubits permiten realizar cálculos que son imposibles o ineficientes para las computadoras clásicas. Por ejemplo, mientras un bit clásico solo almacena un único valor en un momento dado, un qubit en superposición puede representar múltiples valores simultáneamente, aumentando exponencialmente la capacidad de procesamiento en ciertos tipos de problemas.\\[0.5em] 
+\begin{center}
+\includegraphics[scale=0.30]{img/EsferadeBloch.png}
+\captionof{figure}{La esfera de Bloch representa todos los posibles estados cuánticos de un qubit.}
+\label{fig:esferaBloch}
+\end{center}
+\noindent
+Con esto en mente, podemos entender mejor cómo los qubits permiten realizar cálculos que son imposibles o ineficientes para las computadoras clásicas. Por ejemplo, mientras un bit clásico solo almacena un único valor en un momento dado, un qubit en superposición puede representar múltiples valores simultáneamente.
